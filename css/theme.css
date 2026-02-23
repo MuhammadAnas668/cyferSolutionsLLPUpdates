@@ -85,8 +85,36 @@ select.cyfer-service-select option:hover { background: var(--cyfer-blue-hover) !
 .service-card:hover .service-icon { transform: scale(1.1) rotate(5deg); }
 .feature-badge { background: linear-gradient(135deg, var(--cyfer-blue), var(--cyfer-red)); }
 .process-step::before { content: ''; position: absolute; width: 40px; height: 40px; background: rgba(30, 58, 95, 0.1); border-radius: 50%; z-index: -1; animation: pulse-glow 2s infinite; }
-.tech-stack-tag { transition: all 0.3s ease; }
+.tech-stack-tag {
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.65rem;
+  min-height: 8.2rem;
+  padding: 1rem 0.9rem !important;
+}
 .tech-stack-tag:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
+.tech-stack-tag i,
+.tech-stack-tag img {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 0 !important;
+  object-fit: contain;
+}
+.tech-stack-tag span {
+  display: block;
+  line-height: 1.35;
+}
+@media (min-width: 1024px) {
+  .tech-stack-tag {
+    min-height: 8.8rem;
+    padding: 1.1rem 1rem !important;
+  }
+}
 
 /* Contact page */
 .contact-input { transition: all 0.3s ease; }
