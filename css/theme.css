@@ -153,8 +153,8 @@ select.cyfer-service-select option:hover { background: var(--cyfer-blue-hover) !
   gap: 0.95rem;
   overflow-x: auto;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  touch-action: pan-x;
+  scroll-snap-type: x proximity;
+  touch-action: manipulation;
   -webkit-overflow-scrolling: touch;
   padding: 0.35rem 0.05rem 0.9rem;
   -ms-overflow-style: none;
@@ -163,8 +163,8 @@ select.cyfer-service-select option:hover { background: var(--cyfer-blue-hover) !
 .team-slider-track::-webkit-scrollbar { display: none; }
 .team-slide {
   position: relative;
-  flex: 0 0 min(76vw, 230px);
-  min-height: 240px;
+  flex: 0 0 min(68vw, 185px);
+  min-height: 200px;
   border-radius: 1.25rem;
   overflow: hidden;
   isolation: isolate;
@@ -178,7 +178,7 @@ select.cyfer-service-select option:hover { background: var(--cyfer-blue-hover) !
   padding: 0;
   margin: 0;
   text-align: left;
-  width: min(76vw, 230px);
+  width: min(68vw, 185px);
   cursor: pointer;
 }
 .team-slide img {
@@ -375,11 +375,11 @@ select.cyfer-service-select option:hover { background: var(--cyfer-blue-hover) !
 }
 @media (min-width: 768px) {
   .team-slide,
-  .team-slide-profile { flex-basis: 260px; width: 260px; }
+  .team-slide-profile { flex-basis: 208px; width: 208px; }
 }
 @media (min-width: 1024px) {
   .team-slide,
-  .team-slide-profile { flex-basis: 280px; width: 280px; }
+  .team-slide-profile { flex-basis: 224px; width: 224px; }
 }
 
 /* Services page */
