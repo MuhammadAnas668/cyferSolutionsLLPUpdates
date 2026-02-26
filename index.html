@@ -101,7 +101,100 @@
           </div>
         </div>
       </section>
-      
+
+      <section class="max-w-6xl mx-auto px-4 pb-16 md:pb-20" id="team-section">
+        <div class="text-center mb-7 md:mb-8" data-aos="fade-down">
+          <h2 class="team-heading-pill">Meet The Team</h2>
+          <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mt-5 text-lg">Swipe or use arrows to explore the team. Hover any card to see a clear portrait, then click for full profile.</p>
+        </div>
+
+        <div class="team-slider-shell" data-aos="fade-up">
+          <button class="team-slider-btn team-slider-btn-prev" type="button" id="team-slider-prev" aria-label="Previous team members" aria-controls="team-slider-track">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="team-slider-track" id="team-slider-track">
+            <button class="team-slide team-slide-profile" type="button" data-name="Anas Malik" data-role="Lead Developer" data-city="Lahore" data-bio="Owns product architecture, clean code standards, and delivery planning across web projects." data-photo="assets/ourteam/anas-malik.jpg">
+              <img src="assets/ourteam/anas-malik.jpg" loading="lazy" decoding="async" alt="Anas Malik portrait">
+              <div class="team-slide-meta">
+                <h3>Anas Malik</h3>
+                <p>Lead Developer, Lahore</p>
+                <span class="team-slide-snippet">Architecture, APIs, Quality</span>
+              </div>
+            </button>
+            <button class="team-slide team-slide-profile" type="button" data-name="Fahad Raza" data-role="Founder and Engineer" data-city="Islamabad" data-bio="Leads technical strategy and ensures every solution stays aligned with business impact." data-photo="assets/ourteam/fahad-raza.jpg">
+              <img src="assets/ourteam/fahad-raza.jpg" loading="lazy" decoding="async" alt="Fahad Raza portrait">
+              <div class="team-slide-meta">
+                <h3>Fahad Raza</h3>
+                <p>Founder and Engineer, Islamabad</p>
+                <span class="team-slide-snippet">Strategy, Product Direction</span>
+              </div>
+            </button>
+            <button class="team-slide team-slide-profile" type="button" data-name="Saif Qureshi" data-role="Solutions Architect" data-city="Karachi" data-bio="Designs scalable system flows, cloud-ready architecture, and secure backend foundations." data-photo="assets/ourteam/saif-qureshi.jpg">
+              <img src="assets/ourteam/saif-qureshi.jpg" loading="lazy" decoding="async" alt="Saif Qureshi portrait">
+              <div class="team-slide-meta">
+                <h3>Saif Qureshi</h3>
+                <p>Solutions Architect, Karachi</p>
+                <span class="team-slide-snippet">Scalability, Cloud, Security</span>
+              </div>
+            </button>
+            <button class="team-slide team-slide-profile" type="button" data-name="Areeba Khan" data-role="Operations Manager" data-city="Lahore" data-bio="Coordinates delivery timelines, client communication, and project execution workflows." data-photo="assets/ourteam/areeba-khan.jpg">
+              <img src="assets/ourteam/areeba-khan.jpg" loading="lazy" decoding="async" alt="Areeba Khan portrait">
+              <div class="team-slide-meta">
+                <h3>Areeba Khan</h3>
+                <p>Operations Manager, Lahore</p>
+                <span class="team-slide-snippet">Operations, Team Sync</span>
+              </div>
+            </button>
+            <button class="team-slide team-slide-profile" type="button" data-name="Sana Iqbal" data-role="Project Manager" data-city="Karachi" data-bio="Breaks goals into sprint plans, tracks revisions, and keeps releases on schedule." data-photo="assets/ourteam/sana-iqbal.jpg">
+              <img src="assets/ourteam/sana-iqbal.jpg" loading="lazy" decoding="async" alt="Sana Iqbal portrait">
+              <div class="team-slide-meta">
+                <h3>Sana Iqbal</h3>
+                <p>Project Manager, Karachi</p>
+                <span class="team-slide-snippet">Sprints, Planning, Delivery</span>
+              </div>
+            </button>
+            <button class="team-slide team-slide-profile" type="button" data-name="Hina Tariq" data-role="Client Success Manager" data-city="Islamabad" data-bio="Handles client onboarding, support workflows, and long-term partnership growth." data-photo="assets/ourteam/hina-tariq.jpg">
+              <img src="assets/ourteam/hina-tariq.jpg" loading="lazy" decoding="async" alt="Hina Tariq portrait">
+              <div class="team-slide-meta">
+                <h3>Hina Tariq</h3>
+                <p>Client Success, Islamabad</p>
+                <span class="team-slide-snippet">Onboarding, Retention, Support</span>
+              </div>
+            </button>
+            <button class="team-slide team-slide-profile" type="button" data-name="Kaustubh Shanbhag" data-role="QA Specialist" data-city="Lahore" data-bio="Runs manual and automation checks to ensure stable releases and bug-free user experience." data-photo="assets/ourteam/kaustubh-shanbhag.jpg">
+              <img src="assets/ourteam/kaustubh-shanbhag.jpg" loading="lazy" decoding="async" alt="Kaustubh Shanbhag portrait">
+              <div class="team-slide-meta">
+                <h3>Kaustubh</h3>
+                <p>QA Specialist, Lahore</p>
+                <span class="team-slide-snippet">Testing, QA, Reliability</span>
+              </div>
+            </button>
+            <a href="contact.html#contactForm" class="team-slide team-slide-join" aria-label="Join Cyfer Solutions team">
+              <span>Join Us!</span>
+              <small>Open Roles</small>
+            </a>
+          </div>
+          <button class="team-slider-btn team-slider-btn-next" type="button" id="team-slider-next" aria-label="Next team members" aria-controls="team-slider-track">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="team-slider-dots" id="team-slider-dots" aria-label="Team slider pagination"></div>
+      </section>
+
+      <div id="team-modal" class="team-modal hidden" aria-hidden="true">
+        <div class="team-modal-backdrop" data-team-modal-close></div>
+        <div class="team-modal-panel" role="dialog" aria-modal="true" aria-labelledby="team-modal-name">
+          <button type="button" class="team-modal-close" aria-label="Close team profile" data-team-modal-close>
+            <i class="fas fa-times"></i>
+          </button>
+          <img id="team-modal-image" src="" alt="Team member portrait" class="team-modal-image">
+          <h3 id="team-modal-name" class="team-modal-name"></h3>
+          <p id="team-modal-role" class="team-modal-role"></p>
+          <p id="team-modal-bio" class="team-modal-bio"></p>
+        </div>
+      </div>
+       
      
     </main>
 
