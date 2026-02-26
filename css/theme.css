@@ -57,6 +57,31 @@
 .nav-link.nav-active { color: var(--cyfer-accent) !important; }
 .nav-link:hover:not(.nav-active) { color: var(--cyfer-blue-light) !important; }
 
+/* Mobile bottom navigation */
+.mobile-bottom-nav .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  min-width: 2.9rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #334155 !important;
+}
+.dark .mobile-bottom-nav .nav-link { color: #cbd5e1 !important; }
+.mobile-bottom-nav .nav-link i {
+  font-size: 1rem;
+  line-height: 1;
+}
+.mobile-bottom-nav .nav-link.nav-active {
+  color: #1d4ed8 !important;
+}
+.dark .mobile-bottom-nav .nav-link.nav-active {
+  color: #93c5fd !important;
+}
+
 /* Service dropdown - blue hover */
 select#service option:hover,
 select#service option:focus,
@@ -185,9 +210,9 @@ select.cyfer-service-select option:hover { background: var(--cyfer-blue-hover) !
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(2px) saturate(0.8) brightness(0.72);
-  transform: scale(1.05);
-  transition: transform 0.55s ease, filter 0.55s ease;
+  filter: none;
+  transform: scale(1.02);
+  transition: transform 0.55s ease;
 }
 .team-slide::after {
   content: '';
@@ -199,8 +224,7 @@ select.cyfer-service-select option:hover { background: var(--cyfer-blue-hover) !
 }
 .team-slide:hover img,
 .team-slide:focus-visible img {
-  filter: none;
-  transform: scale(1.1);
+  transform: scale(1.06);
 }
 .team-slide:hover::after,
 .team-slide:focus-visible::after {
@@ -364,6 +388,7 @@ select.cyfer-service-select option:hover { background: var(--cyfer-blue-hover) !
 }
 
 @media (max-width: 767px) {
+  body { padding-bottom: 5.8rem; }
   .team-slider-shell { padding: 0 3.6rem; }
   .team-slider-btn {
     width: 3rem;
