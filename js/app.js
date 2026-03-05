@@ -9,6 +9,7 @@
     window.CyferComponents?.renderBackgroundComponent();
     window.CyferComponents?.renderCtaComponent();
     window.CyferComponents?.renderServicesGrid();
+    window.CyferComponents?.renderTeamSlider();
     window.CyferComponents?.populateServiceSelectOptions();
     window.CyferComponents?.setActiveNav();
     window.CyferTheme?.initThemeToggle();

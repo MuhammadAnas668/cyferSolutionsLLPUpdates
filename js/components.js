@@ -70,6 +70,15 @@
     return 'px-12 py-5 bg-white text-[#1e3a5f] rounded-2xl font-bold hover:bg-slate-100 hover:shadow-2xl transition-all active:scale-95';
   }
 
+  function escapeHtml(value) {
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   function renderCtaComponent() {
     const placeholder = document.getElementById('cta-placeholder');
     if (!placeholder) return;
@@ -131,6 +140,68 @@
         `;
       })
       .join('');
+  }
+
+  function renderTeamSlider() {
+    const track = document.getElementById('team-slider-track');
+    if (!track) return;
+
+    const teamCfg = window.CYFER_DATA?.team || {};
+    const titleEl = document.getElementById('team-title');
+    const subtitleEl = document.getElementById('team-subtitle');
+    if (titleEl && teamCfg.title) titleEl.textContent = teamCfg.title;
+    if (subtitleEl && teamCfg.subtitle) subtitleEl.textContent = teamCfg.subtitle;
+
+    const groupedMembers = (teamCfg.groups || []).flatMap((group) =>
+      (group.members || []).map((member) => ({
+        ...member,
+        groupTitle: group.title || ''
+      }))
+    );
+    const members = groupedMembers.length ? groupedMembers : (teamCfg.members || []);
+    const joinCard = teamCfg.joinCard || null;
+
+    const cardsHtml = members
+      .map((member) => {
+        const name = escapeHtml(member.name || 'Team Member');
+        const role = escapeHtml(member.role || '');
+        const city = escapeHtml(member.city || '');
+        const snippet = escapeHtml(member.snippet || member.groupTitle || '');
+        const bio = escapeHtml(member.bio || '');
+        const locationLine = city ? `${role}, ${city}` : role;
+        const photo = String(member.photo || '').trim();
+        const photoHtml = photo
+          ? `<img src="${escapeHtml(photo)}" loading="lazy" decoding="async" alt="${name} portrait">`
+          : '';
+        const cardClass = photo ? 'team-slide team-slide-profile' : 'team-slide team-slide-profile team-slide-no-photo';
+        const bioHtml = bio ? `<p class="team-slide-bio">${bio}</p>` : '';
+
+        return `
+          <button class="${cardClass}" type="button">
+            ${photoHtml}
+            <div class="team-slide-meta">
+              <h3>${name}</h3>
+              <p>${locationLine}</p>
+              ${bioHtml}
+              <span class="team-slide-snippet">${snippet}</span>
+            </div>
+          </button>
+        `;
+      })
+      .join('');
+
+    const joinHtml = joinCard && joinCard.href
+      ? `
+          <a href="${escapeHtml(joinCard.href)}" class="team-slide team-slide-join" aria-label="${escapeHtml(
+            joinCard.ariaLabel || 'Join our team'
+          )}">
+            <span>${escapeHtml(joinCard.label || 'Join Us!')}</span>
+            <small>${escapeHtml(joinCard.subLabel || 'Open Roles')}</small>
+          </a>
+        `
+      : '';
+
+    track.innerHTML = `${cardsHtml}${joinHtml}`;
   }
 
   function populateServiceSelectOptions() {
@@ -213,6 +284,7 @@
     renderBackgroundComponent,
     renderCtaComponent,
     renderServicesGrid,
+    renderTeamSlider,
     populateServiceSelectOptions,
     initServiceSelect
   };

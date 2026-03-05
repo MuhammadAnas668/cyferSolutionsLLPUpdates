@@ -5,6 +5,7 @@
     const prevBtn = document.getElementById('team-slider-prev');
     const nextBtn = document.getElementById('team-slider-next');
     const dotsWrap = document.getElementById('team-slider-dots');
+    const viewToggleBtn = document.getElementById('team-view-toggle');
     if (!track || !prevBtn || !nextBtn || !dotsWrap || track.dataset.ready === '1') return;
     track.dataset.ready = '1';
 
@@ -48,7 +49,9 @@
       return dot;
     });
 
+    let isViewAll = false;
     const updateState = () => {
+      if (isViewAll) return;
       const maxScrollLeft = Math.max(0, track.scrollWidth - track.clientWidth - 2);
       prevBtn.disabled = track.scrollLeft <= 2;
       nextBtn.disabled = track.scrollLeft >= maxScrollLeft;
@@ -64,8 +67,8 @@
     };
     const startAuto = () => {
       stopAuto();
+      if (isViewAll) return;
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      if (modal && modal.getAttribute('aria-hidden') === 'false') return;
       autoTimer = setInterval(() => {
         const maxScrollLeft = Math.max(0, track.scrollWidth - track.clientWidth - 4);
         if (track.scrollLeft >= maxScrollLeft) {
@@ -76,16 +79,42 @@
       }, 4200);
     };
     const queueAutoRestart = () => {
+      if (isViewAll) return;
       if (autoRestartTimer) clearTimeout(autoRestartTimer);
       autoRestartTimer = setTimeout(startAuto, 5500);
     };
+    const setViewAllMode = (enabled) => {
+      isViewAll = enabled;
+      track.classList.toggle('team-slider-track-all', enabled);
+      prevBtn.classList.toggle('hidden', enabled);
+      nextBtn.classList.toggle('hidden', enabled);
+      dotsWrap.classList.toggle('hidden', enabled);
+      if (enabled) {
+        stopAuto();
+        if (autoRestartTimer) clearTimeout(autoRestartTimer);
+        track.scrollTo({ left: 0, behavior: 'auto' });
+      } else {
+        updateState();
+        startAuto();
+      }
+      if (viewToggleBtn) {
+        viewToggleBtn.textContent = enabled ? 'View Slider' : 'View All';
+        viewToggleBtn.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+      }
+    };
+
+    if (viewToggleBtn) {
+      viewToggleBtn.addEventListener('click', () => setViewAllMode(!isViewAll));
+    }
 
     prevBtn.addEventListener('click', () => {
+      if (isViewAll) return;
       stopAuto();
       track.scrollBy({ left: -jump(), behavior: 'smooth' });
       queueAutoRestart();
     });
     nextBtn.addEventListener('click', () => {
+      if (isViewAll) return;
       stopAuto();
       track.scrollBy({ left: jump(), behavior: 'smooth' });
       queueAutoRestart();
@@ -112,6 +141,7 @@
     track.addEventListener(
       'wheel',
       (e) => {
+        if (isViewAll) return;
         const verticalIntent = Math.abs(e.deltaY) > Math.abs(e.deltaX);
         const wantsHorizontal = !verticalIntent || e.shiftKey;
         if (!wantsHorizontal) return;
@@ -132,41 +162,6 @@
       },
       { passive: false }
     );
-
-    const modal = document.getElementById('team-modal');
-    const modalImage = document.getElementById('team-modal-image');
-    const modalName = document.getElementById('team-modal-name');
-    const modalRole = document.getElementById('team-modal-role');
-    const modalBio = document.getElementById('team-modal-bio');
-    const modalCloseEls = document.querySelectorAll('[data-team-modal-close]');
-    const profileButtons = track.querySelectorAll('.team-slide-profile');
-    const closeModal = () => {
-      if (!modal) return;
-      modal.classList.add('hidden');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-      queueAutoRestart();
-    };
-    if (modal && modalImage && modalName && modalRole && modalBio) {
-      profileButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-          stopAuto();
-          if (autoRestartTimer) clearTimeout(autoRestartTimer);
-          modalImage.src = button.dataset.photo || '';
-          modalImage.alt = `${button.dataset.name || 'Team member'} portrait`;
-          modalName.textContent = button.dataset.name || 'Team Member';
-          modalRole.textContent = `${button.dataset.role || 'Team Role'}${button.dataset.city ? `, ${button.dataset.city}` : ''}`;
-          modalBio.textContent = button.dataset.bio || '';
-          modal.classList.remove('hidden');
-          modal.setAttribute('aria-hidden', 'false');
-          document.body.style.overflow = 'hidden';
-        });
-      });
-      modalCloseEls.forEach((el) => el.addEventListener('click', closeModal));
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
-      });
-    }
 
     updateState();
     startAuto();

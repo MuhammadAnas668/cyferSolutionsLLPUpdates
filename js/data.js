@@ -139,6 +139,77 @@ window.CYFER_DATA = Object.freeze({
       ]
     }
   ],
+  team: {
+    title: 'Our Leadership & Expert Team',
+    subtitle:
+      'The people driving innovation, engineering excellence, and client success at Cyfer Solutions.',
+    // Add/update team members here. Set photo path when you want image cards.
+    groups: [
+      {
+        title: 'Leadership Team',
+        members: [
+          {
+            name: 'Hassan Abdul Qadir',
+            role: 'Chief Executive Officer (CEO) & Co-Founder',
+            bio: 'Leads the strategic direction of Cyfer Solutions, focusing on technology innovation, client partnerships, and building scalable software solutions for global businesses.',
+            photo: ''
+          },
+          {
+            name: 'Nukhba Tufail Malik',
+            role: 'Head of Delivery & Co-Founder',
+            bio: 'Oversees project delivery, client engagement, and operational execution to ensure high-quality solutions and timely product launches.',
+            photo: ''
+          }
+        ]
+      },
+      {
+        title: 'Engineering Team',
+        members: [
+          {
+            name: 'Hammad Tahir',
+            role: 'Lead Software Engineer',
+            bio: 'Leads the engineering team and architecture decisions, ensuring robust, scalable, and high-performance software solutions.',
+            photo: ''
+          },
+          {
+            name: 'Muhammad Anas',
+            role: 'Backend Engineering Intern',
+            bio: 'Supports backend development and API implementation while gaining hands-on experience with modern server-side technologies.',
+            photo: ''
+          },
+          {
+            name: 'Zainab Khalid',
+            role: 'Quality Assurance Engineer (Intern)',
+            bio: 'Assists in testing, quality assurance processes, and ensuring reliable and bug-free product releases.',
+            photo: ''
+          }
+        ]
+      },
+      {
+        title: 'Specialists & Advisors',
+        members: [
+          {
+            name: 'Abeer Jalil',
+            role: 'Senior UI/UX Consultant',
+            bio: 'Provides expert guidance in user experience design, helping create intuitive and engaging digital products.',
+            photo: ''
+          },
+          {
+            name: 'Shafaq Jaleel',
+            role: 'Legal Advisor',
+            bio: "Advises on legal compliance, contracts, and regulatory matters to support Cyfer Solutions' operations and client partnerships.",
+            photo: ''
+          }
+        ]
+      }
+    ],
+    joinCard: {
+      href: 'contact.html#contactForm',
+      label: 'Join Us!',
+      subLabel: 'Open Roles',
+      ariaLabel: 'Join Cyfer Solutions team'
+    }
+  },
   cta: {
     about: {
       sectionClasses: 'max-w-4xl mx-auto px-4 py-20',
