@@ -30,11 +30,9 @@
       ? 'about'
       : path.includes('services')
         ? 'services'
-        : path.includes('portfolio')
-          ? 'portfolio'
-          : path.includes('contact')
-            ? 'contact'
-            : 'index';
+        : path.includes('contact')
+          ? 'contact'
+          : 'index';
 
     document.querySelectorAll('.nav-link').forEach((link) => {
       link.classList.remove('nav-active');

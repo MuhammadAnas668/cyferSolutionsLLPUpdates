@@ -14,7 +14,6 @@
     window.CyferTheme?.initThemeToggle();
     window.CyferComponents?.initServiceSelect();
     window.CyferForms?.initContactForm();
-    window.CyferPortfolio?.initPortfolioFilter();
     window.CyferTeamSlider?.initTeamSlider();
     initAOS();
   }

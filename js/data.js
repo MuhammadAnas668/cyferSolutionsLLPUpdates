@@ -167,25 +167,6 @@ window.CYFER_DATA = Object.freeze({
           variant: 'primary'
         },
         {
-          href: 'portfolio.html',
-          label: 'View Case Studies',
-          variant: 'secondary'
-        }
-      ]
-    },
-    portfolio: {
-      sectionClasses: 'max-w-4xl mx-auto px-4 pb-24',
-      cardClasses: 'rounded-[3rem] p-16 text-center text-white shadow-2xl relative overflow-hidden',
-      heading: 'Have a Project in Mind?',
-      text: "Let's collaborate to bring your innovative ideas to life with cutting-edge technology.",
-      overlayClasses: 'absolute inset-0 bg-black/20',
-      buttons: [
-        {
-          href: 'contact.html',
-          label: 'Start Your Project',
-          variant: 'primary'
-        },
-        {
           href: 'contact.html',
           label: 'Book a Consultation',
           variant: 'secondary'
@@ -206,9 +187,9 @@ window.CYFER_DATA = Object.freeze({
           variant: 'primary'
         },
         {
-          href: 'portfolio.html',
-          label: 'View Our Work',
-          icon: 'fas fa-eye',
+          href: 'services.html',
+          label: 'View Services',
+          icon: 'fas fa-briefcase',
           variant: 'secondary'
         }
       ]
