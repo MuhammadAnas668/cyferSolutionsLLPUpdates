@@ -168,12 +168,19 @@
         const city = escapeHtml(member.city || '');
         const snippet = escapeHtml(member.snippet || member.groupTitle || '');
         const bio = escapeHtml(member.bio || '');
-        const locationLine = city ? `${role}, ${city}` : role;
+        const locationLine = city;
         const photo = String(member.photo || '').trim();
         const photoHtml = photo
           ? `<img src="${escapeHtml(photo)}" loading="lazy" decoding="async" alt="${name} portrait">`
           : '';
         const cardClass = photo ? 'team-slide team-slide-profile' : 'team-slide team-slide-profile team-slide-no-photo';
+        const roleBadgeHtml = role
+          ? `<span class="team-slide-snippet team-slide-role-badge"><span class="team-slide-snippet-role">${role}</span></span>`
+          : '';
+        const titleBadgeHtml = snippet
+          ? `<span class="team-slide-snippet team-slide-title-badge"><span class="team-slide-snippet-title">${snippet}</span></span>`
+          : '';
+        const locationHtml = locationLine ? `<p>${locationLine}</p>` : '';
         const bioHtml = bio ? `<p class="team-slide-bio">${bio}</p>` : '';
 
         return `
@@ -181,9 +188,10 @@
             ${photoHtml}
             <div class="team-slide-meta">
               <h3>${name}</h3>
-              <p>${locationLine}</p>
+              ${roleBadgeHtml}
+              ${locationHtml}
               ${bioHtml}
-              <span class="team-slide-snippet">${snippet}</span>
+              ${titleBadgeHtml}
             </div>
           </button>
         `;
