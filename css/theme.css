@@ -568,6 +568,19 @@ select.cyfer-service-select option:hover { background: var(--cyfer-blue-hover) !
 @media (min-width: 768px) {
   .team-slide,
   .team-slide-profile { flex-basis: 238px; width: 238px; }
+  .team-slider-track.team-slider-track-all {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 1.2rem;
+  }
+  .team-slider-track.team-slider-track-all .team-slide,
+  .team-slider-track.team-slider-track-all .team-slide-profile {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
 }
 @media (min-width: 1024px) {
   .team-slide,
