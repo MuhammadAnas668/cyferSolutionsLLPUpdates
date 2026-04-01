@@ -16,6 +16,7 @@
     window.CyferComponents?.initServiceSelect();
     window.CyferForms?.initContactForm();
     window.CyferTeamSlider?.initTeamSlider();
+    window.CyferPortfolio?.init();
     initAOS();
   }
 

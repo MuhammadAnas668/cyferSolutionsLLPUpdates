@@ -32,7 +32,9 @@
         ? 'services'
         : path.includes('contact')
           ? 'contact'
-          : 'index';
+          : path.includes('portfolio') || path.includes('case-study')
+            ? 'portfolio'
+            : 'index';
 
     document.querySelectorAll('.nav-link').forEach((link) => {
       link.classList.remove('nav-active');
