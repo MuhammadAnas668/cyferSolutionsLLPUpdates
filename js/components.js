@@ -123,21 +123,27 @@
     servicesGrid.innerHTML = services
       .map((service, idx) => {
         const delay = idx > 0 ? ` data-aos-delay="${Math.min(idx * 100, 900)}"` : '';
+        const checkColor = service.titleClass ? service.titleClass.split(' ')[0] : 'text-[#16a34a]';
         const featuresHtml = (service.features || [])
           .map(
             (feature) =>
-              `<div class="flex items-center gap-3"><i class="fas fa-check text-[#16a34a]"></i><span class="text-sm">${feature}</span></div>`
+              `<div class="flex items-center gap-3"><i class="fas fa-check ${checkColor}"></i><span class="text-sm">${feature}</span></div>`
           )
           .join('');
 
+        const pageLinkHtml = service.pageLink
+          ? `<a href="${service.pageLink}" class="mt-8 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm border-2 ${checkColor} border-current hover:opacity-80 transition-all hover:-translate-y-1">View Full Page <i class="fas fa-arrow-right text-xs"></i></a>`
+          : '';
+
         return `
-          <div class="service-card glass p-10 rounded-[2.5rem] border border-white/20 dark:border-slate-800" data-aos="zoom-in"${delay}>
-            <div class="service-icon w-20 h-20 bg-gradient-to-br ${service.iconGradient} rounded-2xl flex items-center justify-center text-white text-3xl mb-8"><i class="${service.icon}"></i></div>
-            <h3 class="text-2xl font-bold mb-4 ${service.titleClass}">${service.title}</h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-6">${service.description}</p>
-            <div class="space-y-4">
+          <div class="service-card glass p-10 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 hover:border-current transition-all duration-300 flex flex-col" data-aos="zoom-in"${delay}>
+            <div class="service-icon w-20 h-20 bg-gradient-to-br ${service.iconGradient} rounded-[1.3rem] flex items-center justify-center text-white text-3xl mb-8 shadow-lg"><i class="${service.icon}"></i></div>
+            <h3 class="text-2xl font-bold mb-3 ${service.titleClass}">${service.title}</h3>
+            <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">${service.description}</p>
+            <div class="space-y-3.5 flex-1">
               ${featuresHtml}
             </div>
+            ${pageLinkHtml}
           </div>
         `;
       })

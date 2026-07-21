@@ -138,6 +138,36 @@ window.CYFER_DATA = Object.freeze({
         'Firewall & VPN configurations',
         'Performance monitoring'
       ]
+    },
+    {
+      value: 'cyfer-connect',
+      title: 'Cyfer Connect — Call Center Solutions',
+      description: 'Scalable, trained, and technology-backed inbound & outbound call center teams that represent your brand with precision.',
+      icon: 'fas fa-headset',
+      iconGradient: 'from-[#1e3a5f] to-[#2563eb]',
+      titleClass: 'text-[#1e3a5f] dark:text-[#60a5fa]',
+      pageLink: 'cyfer-connect.html',
+      features: [
+        'Inbound customer support & helpdesk',
+        'Outbound telesales & lead generation',
+        'CRM integration & live reporting',
+        '24/7 coverage with bilingual agents'
+      ]
+    },
+    {
+      value: 'cyfer-health-rcm',
+      title: 'Cyfer Health RCM — Medical Billing',
+      description: 'Accurate, compliant, and fully managed medical billing services that help healthcare providers get paid faster.',
+      icon: 'fas fa-heartbeat',
+      iconGradient: 'from-[#dc2626] to-[#7f1d1d]',
+      titleClass: 'text-[#dc2626] dark:text-[#f87171]',
+      pageLink: 'cyfer-health-rcm.html',
+      features: [
+        'Medical coding (ICD-10, CPT, HCPCS)',
+        'Claims submission & payment posting',
+        'AR follow-up & denial management',
+        'HIPAA-compliant workflows'
+      ]
     }
   ],
   team: {
