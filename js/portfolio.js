@@ -303,7 +303,7 @@
                     <img src="${escHtml(project.image)}" alt="${escHtml(project.title)} UI screenshot" class="cs2-showcase-img">
                   </div>
                 </div>
-                <p class="cs2-showcase-caption"><i class="fas fa-camera text-xs mr-1.5 opacity-60"></i>${escHtml(project.title)} — Primary dashboard interface &amp; user-facing screens</p>
+                <p class="cs2-showcase-caption"><i class="fas fa-camera text-xs mr-1.5 opacity-60"></i>${escHtml(project.title)}: Primary dashboard interface &amp; user-facing screens</p>
               </div>
             </section>
 
@@ -400,7 +400,7 @@
           <div class="relative z-10 text-center">
             <div class="cs2-cta-badge">✦ Ready to build?</div>
             <h2 class="cs2-cta-heading">Inspired by This Project?</h2>
-            <p class="cs2-cta-sub">Let's design and build something exceptional together — from concept to launch.</p>
+            <p class="cs2-cta-sub">Let's design and build something exceptional together from concept to launch.</p>
             <div class="cs2-cta-btns">
               <a href="contact.html" class="cs2-cta-btn-primary" id="cs-cta-contact">
                 <i class="fas fa-rocket"></i> Start Your Project

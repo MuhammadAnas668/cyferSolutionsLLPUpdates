@@ -141,7 +141,7 @@ window.CYFER_DATA = Object.freeze({
     },
     {
       value: 'cyfer-connect',
-      title: 'Cyfer Connect — Call Center Solutions',
+      title: 'Cyfer Connect: Call Center Solutions',
       description: 'Scalable, trained, and technology-backed inbound & outbound call center teams that represent your brand with precision.',
       icon: 'fas fa-headset',
       iconGradient: 'from-[#1e3a5f] to-[#2563eb]',
@@ -156,7 +156,7 @@ window.CYFER_DATA = Object.freeze({
     },
     {
       value: 'cyfer-health-rcm',
-      title: 'Cyfer Health RCM — Medical Billing',
+      title: 'Cyfer Health RCM: Medical Billing',
       description: 'Accurate, compliant, and fully managed medical billing services that help healthcare providers get paid faster.',
       icon: 'fas fa-heartbeat',
       iconGradient: 'from-[#dc2626] to-[#7f1d1d]',
@@ -337,7 +337,7 @@ window.CYFER_DATA = Object.freeze({
       servicesProvided: ['Brand Strategy', 'Digital Marketing', 'Creative Design'],
       overview: 'Channel 7 is a full-service advertising agency in Pakistan with a legacy of 35+ years. As a pioneer in the advertising space, they required a modern, high-impact digital presence to showcase their vast portfolio of over 1000+ clients across 5 cities.',
       problem: 'Their previous website did not reflect the premium, creative identity of the agency. It struggled with performance, lacked a cohesive dark-mode aesthetic, and had an outdated structure that failed to highlight their impressive statistics and industry-leading work.',
-      solution: 'We developed a sleek, dark-themed platform designed to make their creative work take center stage. Fast-loading, fully responsive, and structured to highlight their key metrics—from 35+ years of excellence to their network of 100+ "restless creatives".',
+      solution: 'We developed a sleek, dark-themed platform designed to make their creative work take center stage. Fast-loading, fully responsive, and structured to highlight their key metrics, from 35+ years of excellence to their network of 100+ "restless creatives".',
       approach: [
         { icon: 'fas fa-palette', title: 'Brand Identity Sync', desc: 'Translated their established offline presence into a modern, bold digital interface focused on dark mode aesthetics and striking red accents.' },
         { icon: 'fas fa-chart-line', title: 'Impact Metrics', desc: 'Designed customized stat blocks to instantly communicate their scale: 5 cities, 35+ years, 100+ creatives, and 1000+ happy clients.' },

@@ -21,7 +21,7 @@
 
     <main class="relative z-10">
         <!-- Hero Section -->
-        <section class="max-w-5xl mx-auto px-4 pt-24 pb-12 md:pt-28 md:pb-16">
+        <section class="max-w-6xl mx-auto px-4 pt-24 pb-12 md:pt-28 md:pb-16">
             <div class="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
                 <div class="md:col-span-7" data-aos="fade-up">
                     <span class="inline-block px-4 py-1.5 rounded-full bg-[#1e3a5f]/10 dark:bg-[#1e3a5f]/40 text-[#1e3a5f] dark:text-[#60a5fa] text-xs font-bold uppercase mb-4 tracking-widest">
@@ -32,7 +32,7 @@
                         sound <span class="animate-shine inline-block">like they belong to you.</span>
                     </h1>
                     <p class="text-base text-slate-655 dark:text-slate-450 mb-6 max-w-lg leading-relaxed">
-                        Inbound and outbound calling operations — trained, monitored, and run on real CRM infrastructure. Not a script-reading BPO, an extension of your brand.
+                        Inbound and outbound calling operations, trained, monitored, and run on real CRM infrastructure. An extension of your brand.
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a href="contact.html" class="px-6 py-3.5 bg-[#1e3a5f] text-white rounded-2xl font-bold shadow-xl hover:bg-[#1d4ed8] transition-all hover:-translate-y-1">
@@ -45,30 +45,52 @@
                 </div>
                 
                 <div class="md:col-span-5 relative" data-aos="zoom-in">
-                    <div class="absolute -inset-4 bg-gradient-to-r from-[#1e3a5f] to-[#dc2626] rounded-[3rem] blur-2xl opacity-20"></div>
-                    <div class="relative glass p-6 rounded-[2rem] border border-white/20 dark:border-slate-800/80 shadow-2xl flex flex-col gap-4">
-                        <div class="flex items-center gap-3 border-b border-slate-200/50 dark:border-slate-800/50 pb-3">
-                            <span class="w-10 h-10 rounded-xl bg-[#1e3a5f]/10 flex items-center justify-center shrink-0">
-                                <i class="fas fa-headset text-[#1e3a5f] dark:text-[#60a5fa] text-lg"></i>
+                    <div class="absolute -inset-4 bg-gradient-to-r from-emerald-500/30 via-[#1e3a5f]/20 to-[#dc2626]/20 rounded-[3rem] blur-2xl opacity-40"></div>
+                    <div class="relative glass p-6 sm:p-7 rounded-[2.5rem] border border-white/40 dark:border-slate-800/80 shadow-2xl backdrop-blur-xl flex flex-col gap-4 overflow-hidden">
+                        <!-- Top Ambient Glow -->
+                        <div class="absolute -top-12 -right-12 w-32 h-32 bg-emerald-500/15 rounded-full blur-2xl pointer-events-none"></div>
+
+                        <!-- Card Header -->
+                        <div class="flex items-center gap-3.5 border-b border-slate-200/60 dark:border-slate-800/60 pb-4 relative z-10">
+                            <span class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 text-white flex items-center justify-center shrink-0 shadow-lg shadow-emerald-500/25">
+                                <i class="fas fa-headset text-xl"></i>
                             </span>
                             <div>
-                                <h3 class="font-bold text-slate-800 dark:text-slate-200 text-sm">Customer Support Center</h3>
-                                <p class="text-xs text-slate-500">Cyfer Connect Division</p>
+                                <h3 class="font-extrabold text-slate-900 dark:text-slate-100 text-base leading-tight">Customer Support Center</h3>
+                                <p class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5 mt-0.5">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                    Cyfer Connect Division
+                                </p>
                             </div>
                         </div>
-                        <div class="space-y-3">
-                            <div class="flex justify-between items-center text-xs">
-                                <span class="text-slate-500">Operation Mode</span>
-                                <span class="px-2 py-0.5 rounded-full bg-[#1e3a5f]/10 dark:bg-[#1e3a5f]/30 text-[#1e3a5f] dark:text-[#60a5fa] text-[10px] font-semibold">Fully Managed</span>
+
+                        <!-- Card Rows -->
+                        <div class="space-y-2.5 relative z-10">
+                            <div class="bg-slate-100/80 dark:bg-slate-800/50 p-3.5 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 flex justify-between items-center transition-all hover:translate-x-1 hover:border-emerald-500/40">
+                                <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Operation Mode</span>
+                                <span class="px-3 py-1 rounded-full bg-emerald-500/15 dark:bg-emerald-500/25 text-emerald-700 dark:text-emerald-300 text-xs font-bold border border-emerald-500/30 flex items-center gap-1.5">
+                                    <i class="fas fa-bolt text-[10px]"></i> Fully Managed
+                                </span>
                             </div>
-                            <div class="flex justify-between items-center text-xs">
-                                <span class="text-slate-500">Coverage</span>
-                                <span class="font-semibold text-slate-700 dark:text-slate-300">24/7 Available</span>
+
+                            <div class="bg-slate-100/80 dark:bg-slate-800/50 p-3.5 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 flex justify-between items-center transition-all hover:translate-x-1 hover:border-emerald-500/40">
+                                <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Coverage</span>
+                                <span class="font-bold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
+                                    <i class="fas fa-clock text-emerald-500 text-xs"></i> 24/7 Available
+                                </span>
                             </div>
-                            <div class="flex justify-between items-center text-xs">
-                                <span class="text-slate-500">Security</span>
-                                <span class="font-semibold text-slate-700 dark:text-slate-300">PCI-DSS Compliant</span>
+
+                            <div class="bg-slate-100/80 dark:bg-slate-800/50 p-3.5 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 flex justify-between items-center transition-all hover:translate-x-1 hover:border-emerald-500/40">
+                                <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Security</span>
+                                <span class="font-bold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
+                                    <i class="fas fa-shield-halved text-emerald-500 text-xs"></i> PCI-DSS Compliant
+                                </span>
                             </div>
+                        </div>
+
+                        <!-- Footer indicator -->
+                        <div class="pt-2 text-center border-t border-slate-200/50 dark:border-slate-800/50 text-[11px] font-bold text-slate-500 dark:text-slate-400 flex items-center justify-center gap-1.5">
+                            <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span> 100% Operational Uptime
                         </div>
                     </div>
                 </div>
@@ -77,29 +99,29 @@
 
         <!-- Compliance & Partners Trust Strip -->
         <section class="bg-white/30 dark:bg-slate-900/30 border-y border-slate-200 dark:border-slate-800 py-6">
-            <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
                 <div class="text-xs font-bold uppercase tracking-widest text-[#1e3a5f] dark:text-[#60a5fa]">
                     Trusted Across
                 </div>
                 <div class="flex flex-wrap justify-center gap-3">
                     <div class="border border-dashed border-slate-300 dark:border-slate-800 rounded-xl px-4 py-2 text-xs font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-2">
                         <span class="w-1.5 h-1.5 rounded-full bg-[#1e3a5f] dark:bg-[#60a5fa]"></span>
-                        Client industry marks — placeholder
+                        Client industry marks
                     </div>
                     <div class="border border-dashed border-slate-300 dark:border-slate-800 rounded-xl px-4 py-2 text-xs font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-2">
                         <span class="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
-                        Certifications — placeholder
+                        Certifications
                     </div>
                     <div class="border border-dashed border-slate-300 dark:border-slate-800 rounded-xl px-4 py-2 text-xs font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-2">
                         <span class="w-1.5 h-1.5 rounded-full bg-[#1e3a5f] dark:bg-[#60a5fa]"></span>
-                        Partner logos — placeholder
+                        Partner logos
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- KPI Metrics Grid -->
-        <section class="max-w-5xl mx-auto px-4 py-10 md:py-12">
+        <section class="max-w-6xl mx-auto px-4 py-10 md:py-12">
             <div class="glass p-6 md:p-8 rounded-[2rem] border border-slate-200 dark:border-slate-800 shadow-xl" data-aos="fade-up">
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-6 md:gap-y-0 divide-y md:divide-y-0 md:divide-x divide-slate-200 dark:divide-slate-800">
                     <div class="px-2 text-center">
@@ -132,7 +154,7 @@
 
         <!-- Overview Section -->
         <section class="bg-white/30 dark:bg-slate-900/30 border-y border-slate-200 dark:border-slate-800 py-12 md:py-16">
-            <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+            <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
                 <div data-aos="fade-right">
                     <span class="inline-block px-4 py-1.5 rounded-full bg-[#1e3a5f]/10 dark:bg-[#1e3a5f]/40 text-[#1e3a5f] dark:text-[#60a5fa] text-xs font-bold uppercase mb-4 tracking-widest">
                         Overview
@@ -144,14 +166,14 @@
                 </div>
                 <div data-aos="fade-left">
                     <p class="text-sm text-slate-655 dark:text-slate-450 leading-relaxed">
-                        Cyfer Connect is Cyfer Solutions' telemarketing and contact center division. We build and manage inbound and outbound calling teams for businesses that need dependable, professional voice support without carrying the overhead of an in-house floor. Every campaign launches with clear SOPs, quality benchmarks, and reporting from day one — run by the same delivery discipline we bring to client software.
+                        Cyfer Connect is Cyfer Solutions' telemarketing and contact center division. We build and manage inbound and outbound calling teams for businesses that need dependable, professional voice support without carrying the overhead of an in-house floor. Every campaign launches with clear SOPs, quality benchmarks, and reporting from day one, run by the same delivery discipline we bring to client software.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- What We Offer Section -->
-        <section id="services" class="max-w-5xl mx-auto px-4 py-16 md:py-20">
+        <section id="services" class="max-w-6xl mx-auto px-4 py-16 md:py-20">
             <div class="text-center mb-12" data-aos="fade-down">
                 <span class="inline-block px-4 py-1.5 rounded-full bg-[#1e3a5f]/10 dark:bg-[#1e3a5f]/40 text-[#1e3a5f] dark:text-[#60a5fa] text-xs font-bold uppercase mb-4 tracking-widest">
                     What We Offer
@@ -161,42 +183,42 @@
             
             <div class="grid md:grid-cols-2 gap-6 mb-8">
                 <!-- Card 1 -->
-                <div class="glass p-6 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-[#1e3a5f] transition-all flex flex-col justify-between group" data-aos="zoom-in">
+                <div class="glass p-6 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-400 transition-all flex flex-col justify-between group" data-aos="zoom-in">
                     <div>
                         <div class="flex items-center gap-2.5 mb-4">
-                            <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-[#1e3a5f] text-white">INBOUND</span>
-                            <h3 class="font-black text-lg text-slate-800 dark:text-slate-200">Customer-Facing Support</h3>
+                            <span class="inline-block px-2.5 py-1 rounded text-xs font-bold bg-emerald-600 text-white">INBOUND</span>
+                            <h3 class="font-black text-xl text-slate-800 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Customer-Facing Support</h3>
                         </div>
                         <ul class="space-y-3 mb-6">
-                            <li class="flex items-start gap-2.5"><span class="text-[#1e3a5f] dark:text-[#60a5fa] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-xs">Customer support and helpdesk handling</span></li>
-                            <li class="flex items-start gap-2.5"><span class="text-[#1e3a5f] dark:text-[#60a5fa] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-xs">Order taking and appointment scheduling</span></li>
-                            <li class="flex items-start gap-2.5"><span class="text-[#1e3a5f] dark:text-[#60a5fa] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-xs">Technical support (Tier 1 / Tier 2)</span></li>
-                            <li class="flex items-start gap-2.5"><span class="text-[#1e3a5f] dark:text-[#60a5fa] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-xs">Complaint resolution and escalation management</span></li>
-                            <li class="flex items-start gap-2.5"><span class="text-[#1e3a5f] dark:text-[#60a5fa] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-xs">24/7 and after-hours coverage</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-emerald-600 dark:text-emerald-400 font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-sm">Customer support and helpdesk handling</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-emerald-600 dark:text-emerald-400 font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-sm">Order taking and appointment scheduling</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-emerald-600 dark:text-emerald-400 font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-sm">Technical support (Tier 1 / Tier 2)</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-emerald-600 dark:text-emerald-400 font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-sm">Complaint resolution and escalation management</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-emerald-600 dark:text-emerald-400 font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-sm">24/7 and after-hours coverage</span></li>
                         </ul>
                     </div>
-                    <div class="bg-[#1e3a5f]/5 dark:bg-[#1e3a5f]/15 border border-[#1e3a5f]/20 rounded-xl px-4 py-3 text-xs font-semibold text-[#1e3a5f] dark:text-[#60a5fa] flex items-center gap-2">
+                    <div class="bg-emerald-500/10 dark:bg-emerald-500/20 border border-emerald-500/20 rounded-xl px-4 py-3 text-sm font-semibold text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
                         <i class="fas fa-info-circle"></i>
                         <span><strong>Proof point:</strong> [XX]% of inbound calls resolved on first contact.</span>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="glass p-6 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-[#dc2626] transition-all flex flex-col justify-between group" data-aos="zoom-in" data-aos-delay="100">
+                <div class="glass p-6 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-400 transition-all flex flex-col justify-between group" data-aos="zoom-in" data-aos-delay="100">
                     <div>
                         <div class="flex items-center gap-2.5 mb-4">
-                            <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-[#dc2626] text-white">OUTBOUND</span>
-                            <h3 class="font-black text-lg text-slate-800 dark:text-slate-200">Growth &amp; Retention</h3>
+                            <span class="inline-block px-2.5 py-1 rounded text-xs font-bold bg-[#dc2626] text-white">OUTBOUND</span>
+                            <h3 class="font-black text-xl text-slate-800 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Growth &amp; Retention</h3>
                         </div>
                         <ul class="space-y-3 mb-6">
-                            <li class="flex items-start gap-2.5"><span class="text-[#dc2626] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-xs">Telesales and lead generation</span></li>
-                            <li class="flex items-start gap-2.5"><span class="text-[#dc2626] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-xs">Appointment setting &mdash; B2B and B2C</span></li>
-                            <li class="flex items-start gap-2.5"><span class="text-[#dc2626] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-xs">Customer retention and win-back campaigns</span></li>
-                            <li class="flex items-start gap-2.5"><span class="text-[#dc2626] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-xs">Market research and survey calling</span></li>
-                            <li class="flex items-start gap-2.5"><span class="text-[#dc2626] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-xs">Payment reminders and collections calling</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-[#dc2626] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-sm">Telesales and lead generation</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-[#dc2626] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-sm">Appointment setting for B2B and B2C</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-[#dc2626] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-sm">Customer retention and win-back campaigns</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-[#dc2626] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-sm">Market research and survey calling</span></li>
+                            <li class="flex items-start gap-2.5"><span class="text-[#dc2626] font-bold">&rarr;</span> <span class="text-slate-600 dark:text-slate-400 text-sm">Payment reminders and collections calling</span></li>
                         </ul>
                     </div>
-                    <div class="bg-[#dc2626]/5 dark:bg-[#dc2626]/15 border border-[#dc2626]/20 rounded-xl px-4 py-3 text-xs font-semibold text-[#dc2626] dark:text-[#f87171] flex items-center gap-2">
+                    <div class="bg-[#dc2626]/5 dark:bg-[#dc2626]/15 border border-[#dc2626]/20 rounded-xl px-4 py-3 text-sm font-semibold text-[#dc2626] dark:text-[#f87171] flex items-center gap-2">
                         <i class="fas fa-info-circle"></i>
                         <span><strong>Proof point:</strong> [XX]% average lead-to-appointment conversion rate.</span>
                     </div>
@@ -222,9 +244,9 @@
 
         <!-- Reasons to Choose Section -->
         <section class="bg-white/30 dark:bg-slate-900/30 border-y border-slate-200 dark:border-slate-800 py-16 md:py-20">
-            <div class="max-w-5xl mx-auto px-4">
+            <div class="max-w-6xl mx-auto px-4">
                 <div class="mb-12" data-aos="fade-up">
-                    <span class="inline-block px-4 py-1.5 rounded-full bg-[#1e3a5f]/10 dark:bg-[#1e3a5f]/40 text-[#1e3a5f] dark:text-[#60a5fa] text-xs font-bold uppercase mb-4 tracking-widest">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase mb-4 tracking-widest">
                         Why Cyfer Connect
                     </span>
                     <h2 class="text-2xl md:text-4xl font-black leading-tight">
@@ -234,34 +256,69 @@
                 </div>
 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div data-aos="fade-up" data-aos-delay="100">
-                        <span class="inline-block text-xs font-bold px-2 py-0.5 rounded-md mb-4 text-[#1e3a5f] dark:text-[#60a5fa] bg-[#1e3a5f]/10 dark:bg-[#1e3a5f]/30">01</span>
-                        <h3 class="font-bold text-base mb-2">Trained, Managed Teams</h3>
-                        <p class="text-slate-500 text-xs leading-relaxed">Agents onboarded on your scripts, product knowledge, and tone &mdash; with ongoing QA to keep quality consistent.</p>
+                    <!-- Card 01 -->
+                    <div class="glass p-6 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="100">
+                        <div>
+                            <div class="flex items-center justify-between mb-5">
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-lg text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 dark:bg-emerald-500/20">01</span>
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                                    <i class="fas fa-users-gear text-base"></i>
+                                </div>
+                            </div>
+                            <h3 class="font-black text-lg mb-2 text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Trained, Managed Teams</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Agents onboarded on your scripts, product knowledge, and tone with ongoing QA to keep quality consistent.</p>
+                        </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="200">
-                        <span class="inline-block text-xs font-bold px-2 py-0.5 rounded-md mb-4 text-[#dc2626] dark:text-[#f87171] bg-[#dc2626]/10 dark:bg-[#dc2626]/20">02</span>
-                        <h3 class="font-bold text-base mb-2">Technology-First Ops</h3>
-                        <p class="text-slate-500 text-xs leading-relaxed">Proper CRM integration, dialers, and live reporting run every campaign &mdash; never a spreadsheet.</p>
+
+                    <!-- Card 02 -->
+                    <div class="glass p-6 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="200">
+                        <div>
+                            <div class="flex items-center justify-between mb-5">
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-lg text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 dark:bg-emerald-500/20">02</span>
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                                    <i class="fas fa-laptop-code text-base"></i>
+                                </div>
+                            </div>
+                            <h3 class="font-black text-lg mb-2 text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Technology-First Ops</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Proper CRM integration, dialers, and live reporting run every campaign, never a spreadsheet.</p>
+                        </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="300">
-                        <span class="inline-block text-xs font-bold px-2 py-0.5 rounded-md mb-4 text-[#1e3a5f] dark:text-[#60a5fa] bg-[#1e3a5f]/10 dark:bg-[#1e3a5f]/30">03</span>
-                        <h3 class="font-bold text-base mb-2">Flexible Engagement</h3>
-                        <p class="text-slate-500 text-xs leading-relaxed">Scale from a handful of agents to a full floor, on monthly or project-based terms.</p>
+
+                    <!-- Card 03 -->
+                    <div class="glass p-6 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="300">
+                        <div>
+                            <div class="flex items-center justify-between mb-5">
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-lg text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 dark:bg-emerald-500/20">03</span>
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                                    <i class="fas fa-sliders text-base"></i>
+                                </div>
+                            </div>
+                            <h3 class="font-black text-lg mb-2 text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Flexible Engagement</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Scale from a handful of agents to a full floor, on monthly or project-based terms.</p>
+                        </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="400">
-                        <span class="inline-block text-xs font-bold px-2 py-0.5 rounded-md mb-4 text-[#dc2626] dark:text-[#f87171] bg-[#dc2626]/10 dark:bg-[#dc2626]/20">04</span>
-                        <h3 class="font-bold text-base mb-2">Transparent Reporting</h3>
-                        <p class="text-slate-500 text-xs leading-relaxed">Weekly and monthly reports on call volume, conversion, talk time, and QA scores.</p>
+
+                    <!-- Card 04 -->
+                    <div class="glass p-6 rounded-[2rem] border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="400">
+                        <div>
+                            <div class="flex items-center justify-between mb-5">
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-lg text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 dark:bg-emerald-500/20">04</span>
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                                    <i class="fas fa-chart-pie text-base"></i>
+                                </div>
+                            </div>
+                            <h3 class="font-black text-lg mb-2 text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Transparent Reporting</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Weekly and monthly reports on call volume, conversion, talk time, and QA scores.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Industries We Support Section -->
-        <section class="max-w-5xl mx-auto px-4 py-16 md:py-20">
+        <section class="max-w-6xl mx-auto px-4 py-16 md:py-20">
             <div class="mb-10" data-aos="fade-up">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-[#1e3a5f]/10 dark:bg-[#1e3a5f]/40 text-[#1e3a5f] dark:text-[#60a5fa] text-xs font-bold uppercase mb-4 tracking-widest">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase mb-4 tracking-widest">
                     Industries We Support
                 </span>
                 <h2 class="text-2xl md:text-4xl font-black leading-tight">
@@ -271,24 +328,24 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-5 gap-3" data-aos="fade-up">
-                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-[#1e3a5f] transition-all">E-commerce &amp; Retail</div>
-                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-[#1e3a5f] transition-all">Healthcare Appt. Setting</div>
-                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-[#1e3a5f] transition-all">Real Estate</div>
-                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-[#1e3a5f] transition-all">Financial Services</div>
-                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-[#1e3a5f] transition-all">SaaS &amp; Technology</div>
-                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-[#1e3a5f] transition-all">Logistics &amp; Delivery</div>
-                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-[#1e3a5f] transition-all">Insurance</div>
-                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-[#1e3a5f] transition-all">Education &amp; Enrollment</div>
-                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-[#1e3a5f] transition-all">Home Services</div>
-                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-[#1e3a5f] transition-all">Collections &amp; Recovery</div>
+                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-all">E-commerce &amp; Retail</div>
+                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-all">Healthcare Appt. Setting</div>
+                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-all">Real Estate</div>
+                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-all">Financial Services</div>
+                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-all">SaaS &amp; Technology</div>
+                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-all">Logistics &amp; Delivery</div>
+                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-all">Insurance</div>
+                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-all">Education &amp; Enrollment</div>
+                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-all">Home Services</div>
+                <div class="glass px-4 py-3 rounded-xl text-center text-slate-800 dark:text-slate-200 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-all">Collections &amp; Recovery</div>
             </div>
         </section>
 
         <!-- Our Process Section -->
         <section id="process" class="bg-white/30 dark:bg-slate-900/30 border-y border-slate-200 dark:border-slate-800 py-16 md:py-20">
-            <div class="max-w-5xl mx-auto px-4">
+            <div class="max-w-6xl mx-auto px-4">
                 <div class="mb-12" data-aos="fade-up">
-                    <span class="inline-block px-4 py-1.5 rounded-full bg-[#1e3a5f]/10 dark:bg-[#1e3a5f]/40 text-[#1e3a5f] dark:text-[#60a5fa] text-xs font-bold uppercase mb-4 tracking-widest">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase mb-4 tracking-widest">
                         Our Process
                     </span>
                     <h2 class="text-2xl md:text-4xl font-black leading-tight">From brief to live floor.</h2>
@@ -320,9 +377,9 @@
 
         <!-- Testimonials Section -->
         <section class="py-16 md:py-20">
-            <div class="max-w-5xl mx-auto px-4">
+            <div class="max-w-6xl mx-auto px-4">
                 <div class="mb-10" data-aos="fade-up">
-                    <span class="inline-block px-4 py-1.5 rounded-full bg-[#1e3a5f]/10 dark:bg-[#1e3a5f]/40 text-[#1e3a5f] dark:text-[#60a5fa] text-xs font-bold uppercase mb-4 tracking-widest">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase mb-4 tracking-widest">
                         What Clients Say
                     </span>
                     <h2 class="text-2xl md:text-4xl font-black">Replace with real client quotes.</h2>
@@ -330,18 +387,18 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="glass p-6 rounded-[1.5rem] border border-dashed border-slate-300 dark:border-slate-800/80 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                         <p class="text-slate-655 dark:text-slate-400 italic mb-6 leading-relaxed text-xs">
-                            "[Client testimonial placeholder &mdash; quote to be provided by client]"
+                            "[Client testimonial quote to be provided by client]"
                         </p>
                         <div class="text-xs">
-                            <span class="text-[#1e3a5f] dark:text-[#60a5fa] font-bold">[Name]</span><span class="text-slate-500 dark:text-slate-400">, [Title] &mdash; [Company]</span>
+                            <span class="text-[#1e3a5f] dark:text-[#60a5fa] font-bold">[Name]</span><span class="text-slate-500 dark:text-slate-400">, [Title]</span>
                         </div>
                     </div>
                     <div class="glass p-6 rounded-[1.5rem] border border-dashed border-slate-300 dark:border-slate-800/80 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="150">
                         <p class="text-slate-655 dark:text-slate-400 italic mb-6 leading-relaxed text-xs">
-                            "[Client testimonial placeholder &mdash; quote to be provided by client]"
+                            "[Client testimonial quote to be provided by client]"
                         </p>
                         <div class="text-xs">
-                            <span class="text-[#1e3a5f] dark:text-[#60a5fa] font-bold">[Name]</span><span class="text-slate-500 dark:text-slate-400">, [Title] &mdash; [Company]</span>
+                            <span class="text-[#1e3a5f] dark:text-[#60a5fa] font-bold">[Name]</span><span class="text-slate-500 dark:text-slate-400">, [Title]</span>
                         </div>
                     </div>
                 </div>
@@ -349,7 +406,7 @@
         </section>
 
         <!-- Final CTA Banner Section -->
-        <section class="max-w-4xl mx-auto px-4 py-12 md:py-16" data-aos="zoom-in">
+        <section class="max-w-6xl mx-auto px-4 py-12 md:py-16" data-aos="zoom-in">
             <div class="rounded-[2rem] p-8 md:p-12 text-center text-white shadow-2xl relative overflow-hidden bg-gradient-to-br from-[#1e3a5f] to-[#dc2626] border border-white/20">
                 <div class="relative z-10">
                     <h2 class="text-2xl md:text-4xl font-black mb-4 leading-tight">
