@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cyfer Solutions">
+  <rect width="64" height="64" rx="14" fill="#ffffff"/>
+  <path fill="#D33D44" d="M18 46c-6.6 0-12-5.4-12-12V30c0-6.6 5.4-12 12-12h8v8h-8c-2.2 0-4 1.8-4 4v4c0 2.2 1.8 4 4 4h8v8h-8z"/>
+  <path fill="#233D7B" d="M34 18h10c6.6 0 12 5.4 12 12v4c0 6.6-5.4 12-12 12H34V34h10c2.2 0 4-1.8 4-4v-4c0-2.2-1.8-4-4-4H34V18z"/>
+</svg>

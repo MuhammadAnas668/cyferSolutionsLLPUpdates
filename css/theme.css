@@ -1,4 +1,17 @@
 /* CYFER SOLUTIONS - Shared Theme (Dark Blue, Red, White) */
+
+/* ── Critical Mobile Fix ────────────────────────────────────────────────────
+   overflow-x: hidden on <body> breaks position:fixed on mobile browsers.
+   We move it to <html> and reset body so fixed elements (bottom nav) work. */
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  overflow-x: visible !important;
+  position: relative;
+  min-width: 0;
+}
 :root {
   --cyfer-blue: #1e3a5f;
   --cyfer-blue-light: #2563eb;
@@ -45,19 +58,72 @@
   background-clip: text;
   color: transparent;
   animation: shine 5s linear infinite;
-    padding: 0.8rem;
-  margin: -0.1em;
+  padding: 0.08em 0.2em;
+  margin: -0.08em;
+  max-width: 100%;
 }
 .animate-blob { animation: blob 10s infinite alternate; }
 .animate-float { animation: float 5s ease-in-out infinite; }
 .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
 
-/* Nav: Only ONE active at a time - use .nav-active class */
 .nav-link { transition: color 0.2s; }
+.site-logo-wrap {
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  height: 3.5rem;
+  width: 12.5rem;
+}
 .nav-link.nav-active { color: var(--cyfer-accent) !important; }
 .nav-link:hover:not(.nav-active) { color: var(--cyfer-blue-light) !important; }
 
 /* Mobile bottom navigation */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  z-index: 9999;
+  width: min(calc(100vw - 1.5rem), 460px);
+  transform: translateX(-50%);
+  padding: 0.625rem 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.dark .mobile-bottom-nav {
+  border-color: rgba(51, 65, 85, 0.85);
+  background: rgba(15, 23, 42, 0.95);
+}
+.mobile-bottom-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.15rem;
+}
+.desktop-main-nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  .desktop-main-nav {
+    display: flex !important;
+  }
+  .mobile-bottom-nav,
+  #mobile-services-popup {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .desktop-main-nav {
+    display: none !important;
+  }
+  .mobile-bottom-nav {
+    display: block;
+  }
+}
 .mobile-bottom-nav .nav-link {
   display: flex;
   flex-direction: column;
@@ -99,7 +165,12 @@ select.cyfer-service-select option:hover { background: var(--cyfer-blue-hover) !
 @keyframes typewriter { from { width: 0; } to { width: 100%; } }
 @keyframes bounce-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 @keyframes gradient-shift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-.typewriter { overflow: hidden; border-right: 3px solid var(--cyfer-blue); white-space: nowrap; animation: typewriter 3s steps(40) 1s forwards; }
+.typewriter {
+  overflow: hidden;
+  border-right: 3px solid var(--cyfer-blue);
+  white-space: nowrap;
+  animation: typewriter 3s steps(40) 1s forwards;
+}
 .animate-bounce-soft { animation: bounce-soft 2s infinite; }
 .animate-gradient-shift { background-size: 200% 200%; animation: gradient-shift 5s ease infinite; }
 
@@ -559,15 +630,108 @@ select.cyfer-service-select option:hover { background: var(--cyfer-blue-hover) !
 }
 
 @media (max-width: 767px) {
-  body { padding-bottom: 5.8rem; }
-  .team-slider-shell { padding: 0 3rem; }
-  .team-slider-btn {
-    width: 3rem;
-    height: 3rem;
+  body {
+    padding-bottom: calc(5.8rem + env(safe-area-inset-bottom, 0px));
   }
-  .team-slider-btn-prev { left: 0.15rem; }
-  .team-slider-btn-next { right: 0.15rem; }
-  .team-slider-shell .team-slider-btn i { font-size: 1.25rem; }
+
+  main,
+  footer {
+    min-width: 0;
+  }
+
+  .mobile-bottom-nav {
+    bottom: max(0.85rem, env(safe-area-inset-bottom, 0.85rem));
+    width: min(calc(100vw - 1.5rem), 460px);
+    padding-left: max(0.75rem, env(safe-area-inset-left, 0.75rem));
+    padding-right: max(0.75rem, env(safe-area-inset-right, 0.75rem));
+  }
+
+  .mobile-bottom-nav .nav-link {
+    min-width: 0;
+    flex: 1 1 0;
+    font-size: 0.62rem;
+  }
+
+  .mobile-bottom-nav .nav-link i {
+    font-size: 0.92rem;
+  }
+
+  #mobile-services-popup {
+    bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+    width: min(calc(100vw - 1.5rem), 340px);
+  }
+
+  .site-logo-wrap {
+    height: 2.5rem;
+    width: 8.75rem;
+  }
+
+  .typewriter {
+    white-space: normal;
+    border-right: 0;
+    animation: none;
+    width: auto !important;
+  }
+
+  .team-section-shell {
+    border-radius: 1.5rem;
+    padding-top: 0.75rem;
+  }
+
+  .team-section-shell::before,
+  .team-section-shell::after {
+    display: none;
+  }
+
+  .team-heading-pill {
+    padding: 0.65rem 1.1rem;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+    text-align: center;
+    max-width: calc(100% - 0.5rem);
+  }
+
+  .team-slider-shell {
+    padding: 0 2.35rem;
+  }
+
+  .team-slider-btn {
+    width: 2.65rem;
+    height: 2.65rem;
+  }
+
+  .team-slider-btn-prev { left: 0; }
+  .team-slider-btn-next { right: 0; }
+  .team-slider-shell .team-slider-btn i { font-size: 1.1rem; }
+
+  .team-slide,
+  .team-slide-profile {
+    flex: 0 0 min(78vw, 205px);
+    width: min(78vw, 205px);
+  }
+
+  .footer-newsletter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer-newsletter button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 640px) {
+  .site-logo-wrap {
+    height: 3.25rem;
+    width: 11.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-logo-wrap {
+    height: 3.5rem;
+    width: 12.5rem;
+  }
 }
 @media (min-width: 768px) {
   .team-slide,
@@ -646,4 +810,12 @@ select.cyfer-service-select option:hover { background: var(--cyfer-blue-hover) !
 .contact-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.25); }
 .submit-btn { background: linear-gradient(135deg, var(--cyfer-blue), var(--cyfer-red)); transition: all 0.3s ease; }
 .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 20px 40px -12px rgba(30, 58, 95, 0.4); }
+
+/* Cyfer Health RCM page - mobile polish */
+@media (max-width: 639px) {
+  .health-offerings-card .health-offerings-note {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
